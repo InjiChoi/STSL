@@ -2844,7 +2844,9 @@ input, select, textarea {
 		}
 
 /* Header */
-
+#button {
+	cursor: pointer;
+  }
 	#header {
 		padding: 8em 0 0.1em 0 ;
 	}

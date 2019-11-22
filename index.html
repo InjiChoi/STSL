@@ -11,8 +11,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <link rel="stylesheet" href="assets/css/main.css" />
       <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+      <script>
+            function popup(){
+                var url = "../STSL/generic.html";
+                var name = "popup test";
+                var option = "width = 500, height = 500, top = 100, left = 200, location = no"
+                window.open(url, name, option);
+            }
+        </script>
    </head>
    <body class="is-preload">
+        
       <!-- Wrapper -->
          <div id="wrapper">
 
@@ -56,7 +65,7 @@
                         <p>여유 자리 찾느라 허비한 시간을 미리미리 파악해서 없애버리자!</p>
                      </header>
                      <section class="tiles">
-                        <article class="style1">
+                        <article class="style1" id="button" >
                            <span class="image">
                               <img src="images/maratang.jpg" alt="" />
                            </span>

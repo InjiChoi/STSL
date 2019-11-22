@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
 		<style>
 				.star-rating { width:280px; }
 				.star-rating,.star-rating span { display:inline-block; height:44px; overflow:hidden; background:url(star.png)no-repeat; }
@@ -38,20 +39,104 @@
 	  label input {
 		  height: 100%;
 	  }
+
+
+	  @import url('https://fonts.googleapis.com/css?family=Gugi&display=swap&subset=korean');
+	  @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+		
+  #overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+#popup {
+  display: none;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  background: white;
+  width: 400px;
+  height: 500px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-style: outset;
+  border-left-style: outset;
+  box-shadow: 8px 8px 0px 0 rgba(97, 96, 194, 0.2), 0 6px 5px 0 rgba(75, 168, 255, 0.19);
+}
+#popupclose {
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+}
+.popupcontent {
+  padding: 10px;
+  height: 100%;
+  text-align: center;
+}
+#button {
+  cursor: pointer;
+}
+
+#box {
+    background-color:rgb(255, 208, 0);
+    color: white;
+    text-align: center;
+    padding: 3%;
+    font-family: 'Gugi', cursive;
+    font-size:30px;
+    position:relative;
+    top: -95px;
+    width: 81%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a:visited {
+    color: white;
+}
+a:hover{
+    color : black;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+#hr {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom:-5px;
+}
+#h3 {
+    margin-bottom: none;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+}
+
+#p {
+    font-size: 14pt;
+}
+
 		</style>
+		
 	</head>
 	<body class="is-preload">
+		<!-- 버튼: 누르면 팝업창 나옴 -->
+		
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
+					<header id="header" style="margin-bottom:100px; background-color: rgba(201, 201, 201,0.3); padding-top: 2em;">
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.png" alt="" style="width:90px; height:90px;"/></span>
-									<span class="title">STSL</span>
+								<a href="index.html" class="logo" style="text-align: center;">
+									<span class="symbol"><img src="images/logo.png" alt="" style="width:300px; height:300px;"/></span><br><br>
+									<span class="title" style="text-transform: none; font-size: 55px;">Save your Time, Save your Life.</span>
 								</a>
 
 							<!-- Nav -->
@@ -74,6 +159,7 @@
 					</nav>
 
 				<!-- Main -->
+				
 					<div id="main">
 						<div class="inner">
 							<div class="row mb-3">
@@ -81,8 +167,38 @@
 										<h1>쏘핫 마라탕</h1>
 									</div>
 									
-									<div class="col-md-6 themed-grid-col" style="text-align: right;">
-										<h1>여유</h1>
+									<div class="col-md-4 themed-grid-col" style="text-align: right;">
+										<h1 style="color: darkgreen;">여유</h1></div>
+										<div class="col-md-2 themed-grid-col" style="text-align: right;">
+											<button id="button">쿠폰 받기</button>
+											<!-- 없어도 될것같지만 있어야함 -->
+											<div id="overlay"></div>
+											<!-- 팝업창 내부 내용 -->
+											<div id="popup">
+												<span id="popupclose">X</span>
+												<div class="popupcontent">
+													<h1 id="h3"> Coupon To You </h1>
+													<hr id="hr">
+													<p id="p"><img src="images/쿠폰.png" style= "width:370px;"/>
+													<a href="#footer"><p id="box"> 예정 방문 표시하기</p></a>
+												</div>
+											</div>
+												<script>
+														var closePopup = document.getElementById("popupclose");
+														var overlay = document.getElementById("overlay");
+														var popup = document.getElementById("popup");
+														var button = document.getElementById("button");
+													
+														closePopup.onclick = function() {
+														overlay.style.display = 'none';
+														popup.style.display = 'none';
+														};
+													
+														button.onclick=function() {
+														overlay.style.display = 'block';
+														popup.style.display = 'block';
+														}
+												</script>
 									</div>
 							</div>
 							<br>

@@ -56,6 +56,19 @@ span.title {
 	font-size:70px;
 	color:rgb(105,151,198);
 }
+
+.imagemain {
+	opacity:0.5;
+}
+
+.spare {
+	background-color:rgb(210, 208, 208,0.6);
+	padding:5px;
+	color:#48663a;
+	font-weight: bold;
+	text-shadow:1px 1px 3px grey;
+}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;

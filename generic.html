@@ -13,6 +13,31 @@
 				.star-rating { width:280px; }
 				.star-rating,.star-rating span { display:inline-block; height:44px; overflow:hidden; background:url(star.png)no-repeat; }
 				.star-rating span{ background-position:left bottom; line-height:0; vertical-align:top; }
+
+				.check {display:block; position:relative; margin-bottom:12px; padding-left:25px; font-size:15px; cursor:pointer; 
+						user-select:none;-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none;  } 
+				.check input {position:absolute; opacity:0; cursor:pointer;} 
+				.checkmark {position:absolute; top:10px; left:0px; width:20px; height:20px; background-color:#fff; border:1px solid #ddd;} 
+				.check:hover input ~ .checkmark {background-color:#ccc;} 
+				.check input:checked ~ .checkmark {background-color:#2196F3;} 
+				.checkmark:after {display:none; position:absolute; content:"";} 
+				.check input:checked ~ .checkmark:after {display:block;} 
+				.check .checkmark:after {top:2px; left:7px; width:5px; height:10px; border:solid white; border-width:0 3px 3px 0; transform:rotate(45deg);
+						-webkit-transform:rotate(45deg); -ms-transform:rotate(45deg);} 
+
+
+      label img{
+          width:100px;
+          margin-top:-10px;
+	  }
+	  label .check {
+		  height: 100%;
+		  margin-top:-100px;
+	  }
+
+	  label input {
+		  height: 100%;
+	  }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -51,7 +76,15 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>쏘핫 마라탕</h1>
+							<div class="row mb-3">
+									<div class="col-md-6 themed-grid-col">
+										<h1>쏘핫 마라탕</h1>
+									</div>
+									
+									<div class="col-md-6 themed-grid-col" style="text-align: right;">
+										<h1>여유</h1>
+									</div>
+							</div>
 							<br>
 							<span class="imagemain"><img src="images/longsohot.jpg" alt="" width="100%"/></span>
 						</div>
@@ -59,16 +92,16 @@
 						<div class="inner">
 							<div class="container">
 									<div class="row mb-3">
-											<div class="col-md-6 themed-grid-col">
-												<div style="margin: 100px 0px;">
-												<p>영업 시간 : AM 10:00 ~ PM 10:00</p>
-												<P>BREAK TIME : PM 02:00 ~ PM 03:00</P>  
-												</div>
+										<div class="col-md-6 themed-grid-col">
+											<div style="margin: 100px 0px;">
+												<p>영업 시간 : AM 11:00 ~ PM 09:00 &nbsp;&nbsp;&nbsp;매주 일요일 휴무</p>
+												<p>위치 : 서울 용산구 청파로47길 88</p>
+												<p>전화번호 : 010-2755-5008</p>
 											</div>
-
-											<div class="col-md-6 themed-grid-col">
+										</div>
+										<div class="col-md-6 themed-grid-col">
 												<img src="images/image2.png" alt="" />
-											</div>
+										</div>
 									</div>
 							</div>
 						</div>
@@ -76,39 +109,99 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
+								<div class="container">
+									<div class="row">
+										<div class="col-sm">
+										  <h1> MORNING TIME </h1> <!-- 아침 테이블 --></br><br>
+										  
+										  <label class="check" name="morning">  &nbsp 08:00 ~ 09:00 
+											<input type="checkbox" class="checkmark"> 
+											<span class="checkmark"></span> <img class="img" src="images/적음.png" >
+
+											</label> 
+											
+											<br>
+									
+											<label class="check"> &nbsp 09:00 ~ 10:00 <img class="img" src="images/적음.png">
+												<input type="checkbox"> 
+												<span class="checkmark"></span> 
+											</label>
+											<br>
+										 <label class="check"> &nbsp 10:00 ~ 11:00 <img class="img" src="images/보통.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
+										<br>
+										<label class="check"> &nbsp 11:00 ~ 12:00 <img class="img" src="images/적음.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
+										<br>
 										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
+									
+									  
+										<div class="col-sm">
+										  <h1> LUNCH TIME </h1> <!-- 점심 테이블 --><br><br>
+										  <label class="check"> &nbsp 12:00 ~ 13:00 <img class="img" src="images/많음.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+											</label> 
+											<br>
+											<label class="check"> &nbsp 13:00 ~ 14:00 <img class="img" src="images/많음.png">
+												<input type="checkbox"> 
+												<span class="checkmark"></span> 
+											</label>
+											<br>
+										 <label class="check"> &nbsp 14:00 ~ 15:00 <img class="img" src="images/보통.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
+										<br>
+										<label class="check"> &nbsp 15:00 ~ 16:00 <img class="img" src="images/적음.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label>
+										<br>
+										<label class="check"> &nbsp 16:00 ~ 17:00 <img class="img" src="images/적음.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
+									
+										
 										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
+									  
+										<div class="col-sm">
+										  <h1> DINNER TIME </h1> <!-- 저녁 테이블 --><br><br>
+										<label class="check"> &nbsp 17:00 ~ 18:00 <img class="img" src="images/적음.png">
+												<input type="checkbox"> 
+												<span class="checkmark"></span> 
+										</label> 
+										<br>
+										<label class="check"> &nbsp 18:00 ~ 19:00 <img class="img" src="images/많음.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
+										<br>
+										<label class="check"> &nbsp 19:00 ~ 20:00 <img class="img" src="images/많음.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
+										<br>
+										<label class="check"> &nbsp 20:00 ~ 21:00 <img class="img" src="images/보통.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label>
+										<br>
+										<label class="check"> &nbsp 21:00 ~ 22:00 <img class="img" src="images/보통.png">
+												<input type="checkbox" > 
+												<span class="checkmark"></span> 
+										</label> 
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
+										</div>
+									  </div>
+									
+
+							<ul class="copyright" style="text-align:center">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
